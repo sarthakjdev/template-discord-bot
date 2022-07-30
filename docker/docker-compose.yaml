@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  postgres:
+    container_name: template-postgres
+    image: postgres
+    environment:
+      - POSTGRES_USER=template
+      - POSTGRES_DB=template
+      - POSTGRES_PASSWORD=template
+    volumes:
+      - data:/var/lib/postgresql/data
+    ports:
+      - "5431:5432"
+volumes:
+  data:
